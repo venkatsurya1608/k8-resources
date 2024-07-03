@@ -7,10 +7,28 @@ spec:
   - name: nginx
     image: nginx
     resources:
+      # soft limit
       requests:
-        memory: "64mi"
         cpu: "100m"
-# limits should be atleast same or more than requests i.e hard limit      
+        memory: "128Mi"
+      # limits should be atleast or more than requests i.e hard limit
       limits:
-        memory: "64mi" # minimum limits
-        cpu: "100m"  
+        cpu: "100m"
+        memory: "128Mi"
+
+# kind: Pod
+# apiVersion: v1
+# metadata:
+#   name: resources
+# spec:
+#   containers:
+#   - name: nginx
+#     image: nginx
+#     resources:
+#       requests:
+#         memory: "64mi"
+#         cpu: "100m"
+# # limits should be atleast same or more than requests i.e hard limit      
+#       limits:
+#         memory: "64mi" # minimum limits
+#         cpu: "100m"  
