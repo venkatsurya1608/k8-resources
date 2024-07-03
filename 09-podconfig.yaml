@@ -8,7 +8,7 @@ spec:
     image: nginx
     envFrom:
     - configMapRef:
-      name: venkatsurya1608
+        name: venkatsurya1608
 # if u need single value try below method
 # env:
     # - name: course
