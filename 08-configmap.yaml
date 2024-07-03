@@ -1,4 +1,4 @@
-kind: configmap
+kind: Configmap
 apiVersion: v1
 metadata:
   name: venkat1608
