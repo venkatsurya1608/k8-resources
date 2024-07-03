@@ -1,13 +1,23 @@
-kind: ConfigMap
+# kind: ConfigMap
+# apiVersion: v1
+# metadata:
+#   name: venkatsurya1608
+# # spec:
+# #   containers:
+# #   - name: alpine
+# #     image: alpine
+# #     #command: ["sleep", "200"]
+# data:
+#   course: "DevOps with AWS"
+#   trainer: "sivakumar"
+#   github: "https://github.com/venkatsurya1608/k8-resources.git"
+
+
 apiVersion: v1
+kind: ConfigMap
 metadata:
-  name: venkatsurya1608
-# spec:
-#   containers:
-#   - name: alpine
-#     image: alpine
-#     #command: ["sleep", "200"]
+  name: daws78s
 data:
   course: "DevOps with AWS"
   trainer: "sivakumar"
-  github: "https://github.com/venkatsurya1608/k8-resources.git"
+  github: "https://github.com/daws-78s/k8-resources"
