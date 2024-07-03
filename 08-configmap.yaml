@@ -1,0 +1,13 @@
+kind: configmap
+apiversion: v1
+metadata:
+  name: venkat1608
+spec:
+  containers:
+  - name: alpine
+    image: alpine
+    command: ["sleep", "200"]
+data:
+  course: "DevOps with AWS"
+  trainer: "sivakumar"
+  github: "https://github.com/venkatsurya1608?tab=repositories"

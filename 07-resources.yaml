@@ -1,0 +1,16 @@
+kind: pods
+apiversion: v1
+metadata:
+  name: resources
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  resourses:
+    requests:
+      memory: "64mi"
+      cpu: "250m"
+# limits should be atleast same or more than requests i.e hard limit      
+    limits:
+      memory: "64mi" # minimum limits
+      cpu: "250m"  

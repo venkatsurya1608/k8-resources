@@ -1,0 +1,23 @@
+kind: pod
+apiversion: v1
+metadata:
+  name: pod-config
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envFrom:
+    - configMapRef:
+      name: venkat1608
+# if u need single value try below method
+# env:
+    # - name: course
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: venkat1608
+    #       key: course
+    # - name: trainer
+    #   valueFrom:
+    #     configMapKeyRef:
+    #       name: venkat1608
+    #       key: trainer

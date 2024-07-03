@@ -1,0 +1,14 @@
+kind: pods
+apiversion: v1
+metadata:
+  name: environment-test
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      env:
+      - name: course
+        value: 'kubernetes'  
+      - name: duration
+        value: '12 hours'
+          

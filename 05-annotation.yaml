@@ -1,0 +1,17 @@
+kind: Pod
+apiversion: v1
+metadata:
+  name: annotations-demo
+  labels:
+    course: k8
+    trainer: sivakumar 
+  annotations:
+    #imageregistry: "https://github.com/venkatsurya1608?tab=repositories"
+    kubernetes.io/created-by: 'venkat'
+    jenkins.build.url: 'https://jenkins.venkatdevops1608.online'
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80  # ports no opt (automatically its taken)
