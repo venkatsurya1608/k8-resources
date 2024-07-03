@@ -1,5 +1,5 @@
-kind: pods
-apiversion: v1
+kind: Pods
+apiVersion: v1
 metadata:
   name: environment-test
 spec:
@@ -11,4 +11,3 @@ spec:
         value: 'kubernetes'  
       - name: duration
         value: '12 hours'
-          
