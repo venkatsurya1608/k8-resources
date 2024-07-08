@@ -5,16 +5,15 @@ metadata:
 spec:
   capacity:
     storage: 5Gi
-  volumeMode: 
+  volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
   storageClassName: ""
   persistentVolumeReclaimPolicy: Retain
   csi:
     driver: efs.csi.aws.com
-    volumeHandle: fs-059d29d53a81e31d2
+    volumeHandle: "fs-059d29d53a81e31d2"
 ---
-
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -26,16 +25,17 @@ spec:
   volumeName: efs-static
   resources:
     requests:
-      storage: 3Gi
+      storage: 2Gi
 ---
-
 apiVersion: v1
 kind: Pod
 metadata:
   name: efs-app
+  labels:
+    purpose: efs-static
 spec:
   containers:
-  - name: nginx
+  - name: app
     image: nginx
     volumeMounts:
     - name: persistent-storage
