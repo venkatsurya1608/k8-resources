@@ -14,5 +14,5 @@ spec:
             values:
             - expense
   containers:
-  - name: with-node-affinity
+  - name: with-node-affinity  # 
     image: nginx
